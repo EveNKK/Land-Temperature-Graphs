@@ -9,7 +9,7 @@
 
 
 #Load Temperature Data; separate month and year, load shiny and ggplot2
-GlobalLandTemperaturesByState <- read.csv("C:/Users/SSO103/Downloads/datasets/datasets/GlobalLandTemperatures/GlobalLandTemperaturesByState.csv")
+GlobalLandTemperaturesByState <- read.csv("C:/Users/SSO103/Documents/Shiny Apps/StateTemperatures/GlobalLandTemperaturesByState.csv")
 
 Data=GlobalLandTemperaturesByState
 Data$dt=as.Date(Data$dt)
