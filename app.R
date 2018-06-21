@@ -7,12 +7,15 @@
 #    http://shiny.rstudio.com/
 #
 
+
 #Load Temperature Data; separate month and year, load shiny and ggplot2
 GlobalLandTemperaturesByState <- read.csv("C:/Users/SSO103/Downloads/datasets/datasets/GlobalLandTemperatures/GlobalLandTemperaturesByState.csv")
+
 Data=GlobalLandTemperaturesByState
 Data$dt=as.Date(Data$dt)
 Data$Month=months.Date(Data$dt)
 Data$Year=format(Data$dt, "%Y")
+
 library(shiny)
 library(ggplot2)
 
@@ -26,7 +29,7 @@ ui <- fluidPage(
                  #Year selection box
                   selectInput("SelectYear", h3("Year"),
                              
-                             choices = list("2013 (January-September)" = "2013",
+                             choices = list("2013 (January-August)" = "2013",
                                             "2012" = "2012",
                                             "2011" = "2011",
                                             "2010" = "2010",
@@ -174,8 +177,9 @@ ui <- fluidPage(
                             selected = "United States")
                   ),
     
-    #display graph
-    mainPanel("This graph shows the average temperature by state for the selected country.",
+    mainPanel("This graph will show the average temperature by state for the selected country, month, and year.",
+              
+              #display graph
               imageOutput("TempGraph")
     )
   )
