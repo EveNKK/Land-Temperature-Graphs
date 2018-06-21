@@ -212,3 +212,4 @@ shinyApp(ui = ui, server = server)
 #This was surprisingly fun! Frustrating at times, but enjoyable.
 
 #I can't make a regression graph because there are like 600,000 points; it ends up covering the graph with dots
+#Even when I subset it, the NA values mess it up and I'm too lazy to do anything about it
