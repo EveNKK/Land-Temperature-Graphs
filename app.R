@@ -201,7 +201,7 @@ server <- function(input, output) {
       
   },
   
-  #stretch graph, otherwise Russia's states are squished together
+  #stretch graph, otherwise Russia's states/provinces are squished together
   height=680)
   
 }
