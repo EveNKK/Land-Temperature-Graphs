@@ -175,7 +175,7 @@ ui <- fluidPage(
                   ),
     
     #display graph
-    mainPanel("This graph shows the temperature for the selected country.",
+    mainPanel("This graph shows the average temperature by state for the selected country.",
               imageOutput("TempGraph")
     )
   )
@@ -207,3 +207,4 @@ shinyApp(ui = ui, server = server)
 
 #This was surprisingly fun! Frustrating at times, but enjoyable.
 
+#I can't make a regression graph because there are like 600,000 points; it ends up covering the graph with dots
